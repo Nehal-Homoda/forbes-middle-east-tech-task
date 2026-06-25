@@ -93,7 +93,7 @@ withDefaults(defineProps<Props>(), {
       <div class="space-y-2">
         <p
           v-if="subtitle && subtitlePosition === 'top'"
-          :class="['text-[11px] text-gray-500 dark:text-gray-400', metaClass]"
+          :class="['text-[11px]  dark:text-gray-400', metaClass]"
         >
           {{ subtitle }}
         </p>
@@ -109,7 +109,7 @@ withDefaults(defineProps<Props>(), {
 
         <p
           v-if="subtitle && subtitlePosition === 'bottom'"
-          :class="['text-[11px] text-gray-500 dark:text-gray-400', metaClass]"
+          :class="['text-[11px]  dark:text-gray-400', metaClass]"
         >
           {{ subtitle }}
         </p>
@@ -117,7 +117,7 @@ withDefaults(defineProps<Props>(), {
         <div
           v-if="category || date"
           :class="[
-            'flex flex-wrap items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400',
+            'flex flex-wrap items-center gap-2 text-[11px]  dark:text-gray-400',
             metaClass,
           ]"
         >
@@ -164,7 +164,7 @@ withDefaults(defineProps<Props>(), {
           'min-w-0 flex flex-col justify-center gap-2 sm:col-span-7 sm:gap-3',
         ]"
       >
-        <span v-if="subtitle" class="text-[11px] text-gray-500 dark:text-gray-400">
+        <span v-if="subtitle" class="text-[11px]  dark:text-gray-400">
           {{ subtitle }}
         </span>
 
@@ -174,14 +174,14 @@ withDefaults(defineProps<Props>(), {
 
         <p
           v-if="description"
-          class="line-clamp-3 text-[11px] leading-snug text-gray-600 dark:text-gray-400"
+          class="line-clamp-3 text-[11px] leading-snug  dark:text-gray-400"
         >
           {{ description }}
         </p>
 
         <div
           v-if="category || date"
-          class="flex flex-wrap items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400"
+          class="flex flex-wrap items-center gap-2 text-[11px]  dark:text-gray-400"
         >
           <span v-if="category">{{ category }}</span>
 
