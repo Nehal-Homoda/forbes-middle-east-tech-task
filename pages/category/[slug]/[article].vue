@@ -26,19 +26,21 @@ useHead({
 
 <template>
   <article class="mx-auto max-w-[760px] pt-16 md:pt-20">
-    <NuxtImg
-      :src="articleDetail.image"
-      :alt="articleDetail.title"
-      width="900"
-      height="560"
-      class="aspect-[900/560] w-full object-cover"
-      format="webp"
-      quality="76"
-      densities="1x"
-      sizes="100vw md:760px"
-    />
+    <div class="skeleton-surface overflow-hidden">
+      <NuxtImg
+        :src="articleDetail.image"
+        :alt="articleDetail.title"
+        width="900"
+        height="560"
+        class="aspect-[900/560] w-full object-cover"
+        format="webp"
+        quality="76"
+        densities="1x"
+        sizes="100vw md:760px"
+      />
+    </div>
 
-    <div class="mt-4 border-y border-black/50 py-2">
+    <div class="mt-4 border-y border-black/50 py-2 dark:border-white/50">
       <div class="flex items-center gap-3">
         <img
           src="/favicon.ico"
@@ -54,11 +56,11 @@ useHead({
       </div>
     </div>
 
-    <h1 class="mt-6 border-b border-black/50 pb-5 text-2xl font-semibold uppercase leading-tight md:text-3xl">
+    <h1 class="mt-6 border-b border-black/50 pb-5 text-2xl font-semibold uppercase leading-tight dark:border-white/50 md:text-3xl">
       {{ articleDetail.title }}
     </h1>
 
-    <div class="space-y-5 py-6 text-sm leading-7 text-gray-700">
+    <div class="space-y-5 py-6 text-sm leading-7 text-gray-700 dark:text-gray-300">
       <template v-for="(paragraph, index) in articleDetail.paragraphs" :key="paragraph">
         <p>{{ paragraph }}</p>
         <ul
@@ -74,7 +76,7 @@ useHead({
   </article>
 
   <section class="pt-12 pb-20">
-    <div class="border-b border-black/60 pb-3">
+    <div class="border-b border-black/60 pb-3 dark:border-white/60">
       <h2 class="text-2xl font-medium uppercase md:text-3xl">SIMILAR NEWS</h2>
     </div>
 

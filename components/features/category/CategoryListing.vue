@@ -20,7 +20,7 @@ defineProps<{
         :key="article.id"
         v-bind="article"
         layout="vertical"
-        vertical-image-class="bg-black/5"
+        vertical-image-class="bg-black/5 dark:bg-white/10"
         title-class="text-lg leading-snug sm:max-w-none"
         meta-class="text-xs"
         subtitle-position="bottom"

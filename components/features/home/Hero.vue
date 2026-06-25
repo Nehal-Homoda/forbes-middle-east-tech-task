@@ -19,7 +19,7 @@ import { hero, heroTeasers } from "~/data/home";
 
     <article class="space-y-5 lg:space-y-6">
       <div
-        class="overflow-hidden rounded-sm aspect-[16/10] sm:aspect-[1320/580]"
+        class="skeleton-surface overflow-hidden rounded-sm aspect-[16/10] sm:aspect-[1320/580]"
       >
         <NuxtImg
           src="/HomeBg.png"
@@ -40,13 +40,13 @@ import { hero, heroTeasers } from "~/data/home";
           <span
             v-for="category in hero.categories"
             :key="category"
-            class="rounded-md border border-black/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide sm:text-xs"
+            class="rounded-md border border-black/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide dark:border-white/60 sm:text-xs"
           >
             {{ category }}
           </span>
         </div>
 
-        <div class="flex items-center gap-2 text-xs text-gray-600">
+        <div class="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
           <span>{{ hero.date }}</span>
           <span>—</span>
           <span>{{ hero.readTime }}</span>

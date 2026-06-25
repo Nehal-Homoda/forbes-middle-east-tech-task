@@ -1,17 +1,17 @@
 <template>
-  <footer class="mt-10 border-t-2 border-black pb-6 pt-3">
-    <div class="border-b border-black/40 pb-3">
+  <footer class="mt-10 border-t-2 border-black pb-6 pt-3 dark:border-white/70">
+    <div class="border-b border-black/40 pb-3 dark:border-white/40">
       <NuxtLink
         to="/"
         aria-label="Forbes Middle East home"
-        class="inline-flex"
+        class="skeleton-surface inline-flex"
       >
         <NuxtImg
           src="/Forbes Middle East.png"
           alt="Forbes Middle East"
           width="327"
           height="82"
-          class="block h-auto w-[120px] object-contain sm:w-[140px]"
+          class="block h-auto w-[120px] object-contain sm:w-[140px] dark:invert"
           format="webp"
           quality="80"
           densities="1x"
@@ -21,11 +21,11 @@
     </div>
 
     <div
-      class="flex items-center justify-between gap-4 pt-3 text-[11px] text-gray-700"
+      class="flex items-center justify-between gap-4 pt-3 text-[11px] text-gray-700 dark:text-gray-300"
     >
       <p>© 2026 Forbes Middle East. All Rights Reserved.</p>
 
-      <div class="flex shrink-0 items-center gap-3 text-black">
+      <div class="flex shrink-0 items-center gap-3 text-black dark:text-white">
         <span aria-label="Instagram" role="img">
           <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="18" height="18" rx="5" />

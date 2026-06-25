@@ -18,7 +18,7 @@ const { featured, articles } = worldNews;
     >
       <NuxtLink
         to="/"
-        class="group grid overflow-hidden rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black md:relative"
+        class="group skeleton-surface grid overflow-hidden rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black dark:focus-visible:outline-white md:relative"
       >
         <NuxtImg
           :src="featured.image"
@@ -34,11 +34,11 @@ const { featured, articles } = worldNews;
         />
 
         <div
-          class="flex flex-col justify-between gap-8 bg-white p-5 sm:p-6 md:absolute md:left-6 md:top-6 md:h-[calc(100%-3rem)] md:w-[52%] lg:w-[48%] lg:p-8"
+          class="flex flex-col justify-between gap-8 bg-white p-5 dark:bg-[#1b1e25] sm:p-6 md:absolute md:left-6 md:top-6 md:h-[calc(100%-3rem)] md:w-[52%] lg:w-[48%] lg:p-8"
         >
           <div class="space-y-6 lg:space-y-8">
             <span
-              class="inline-flex w-fit rounded-sm bg-black px-4 py-2 text-[10px] font-semibold text-white sm:px-5 sm:py-3 sm:text-xs"
+              class="inline-flex w-fit rounded-sm bg-black px-4 py-2 text-[10px] font-semibold text-white dark:bg-white dark:text-black sm:px-5 sm:py-3 sm:text-xs"
             >
               {{ featured.date }}
             </span>

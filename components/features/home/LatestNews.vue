@@ -17,7 +17,7 @@ import ArticleCard from "~/components/shared/cards/ArticleCard.vue";
     >
       <NuxtLink
         :to="latestNews.featured.to"
-        class="group relative overflow-hidden rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+        class="group skeleton-surface relative overflow-hidden rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black dark:focus-visible:outline-white"
       >
         <NuxtImg
           :src="latestNews.featured.image"

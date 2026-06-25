@@ -34,13 +34,13 @@ withDefaults(defineProps<Props>(), {
 <template>
   <NuxtLink
     :to="to"
-    class="group block h-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+    class="group block h-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black dark:focus-visible:outline-white"
   >
     <article
       v-if="layout === 'teaser'"
       class="grid h-full grid-cols-[62px_minmax(0,1fr)] items-center gap-3 sm:grid-cols-[66px_minmax(0,1fr)]"
     >
-      <div :class="['overflow-hidden rounded-sm', verticalImageClass]">
+      <div :class="['skeleton-surface overflow-hidden rounded-sm', verticalImageClass]">
         <NuxtImg
           :src="image"
           :alt="title"
@@ -64,7 +64,7 @@ withDefaults(defineProps<Props>(), {
         </p>
 
         <h3
-          class="line-clamp-2 text-xs font-normal leading-snug group-hover:text-black"
+          class="line-clamp-2 text-xs font-normal leading-snug group-hover:text-black dark:group-hover:text-white"
         >
           {{ title }}
         </h3>
@@ -75,7 +75,7 @@ withDefaults(defineProps<Props>(), {
       v-else-if="layout === 'vertical'"
       class="h-full space-y-3 sm:space-y-4"
     >
-      <div class="overflow-hidden rounded-sm">
+      <div :class="['skeleton-surface overflow-hidden rounded-sm', verticalImageClass]">
         <NuxtImg
           :src="image"
           :alt="title"
@@ -93,14 +93,14 @@ withDefaults(defineProps<Props>(), {
       <div class="space-y-2">
         <p
           v-if="subtitle && subtitlePosition === 'top'"
-          :class="['text-[11px] ', metaClass]"
+          :class="['text-[11px] text-gray-500 dark:text-gray-400', metaClass]"
         >
           {{ subtitle }}
         </p>
 
         <h3
           :class="[
-            'text-sm font-medium leading-snug sm:max-w-[290px]',
+            'text-sm font-medium leading-snug text-black sm:max-w-[290px] dark:text-white',
             titleClass,
           ]"
         >
@@ -109,14 +109,17 @@ withDefaults(defineProps<Props>(), {
 
         <p
           v-if="subtitle && subtitlePosition === 'bottom'"
-          :class="['text-[11px] text-gray-500', metaClass]"
+          :class="['text-[11px] text-gray-500 dark:text-gray-400', metaClass]"
         >
           {{ subtitle }}
         </p>
 
         <div
           v-if="category || date"
-          :class="['flex flex-wrap items-center gap-2 text-[11px] ', metaClass]"
+          :class="[
+            'flex flex-wrap items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400',
+            metaClass,
+          ]"
         >
           <span v-if="category">{{ category }}</span>
 
@@ -137,7 +140,7 @@ withDefaults(defineProps<Props>(), {
         :class="[
           imageClass,
           reverse ? 'order-1' : 'order-2',
-          'overflow-hidden rounded-sm sm:col-span-5',
+          'skeleton-surface overflow-hidden rounded-sm sm:col-span-5',
         ]"
       >
         <NuxtImg
@@ -161,24 +164,24 @@ withDefaults(defineProps<Props>(), {
           'min-w-0 flex flex-col justify-center gap-2 sm:col-span-7 sm:gap-3',
         ]"
       >
-        <span v-if="subtitle" class="text-[11px]">
+        <span v-if="subtitle" class="text-[11px] text-gray-500 dark:text-gray-400">
           {{ subtitle }}
         </span>
 
-        <h4 class="text-sm font-medium leading-snug">
+        <h4 class="text-sm font-medium leading-snug text-black dark:text-white">
           {{ title }}
         </h4>
 
         <p
           v-if="description"
-          class="line-clamp-3 text-[11px] leading-snug text-gray-600"
+          class="line-clamp-3 text-[11px] leading-snug text-gray-600 dark:text-gray-400"
         >
           {{ description }}
         </p>
 
         <div
           v-if="category || date"
-          class="flex flex-wrap items-center gap-2 text-[11px]"
+          class="flex flex-wrap items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400"
         >
           <span v-if="category">{{ category }}</span>
 

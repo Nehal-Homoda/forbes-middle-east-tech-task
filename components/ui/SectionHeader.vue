@@ -16,7 +16,7 @@ withDefaults(defineProps<Props>(), {
   <div
     :class="[
       'flex flex-col gap-3 pb-4  sm:flex-row sm:items-center sm:justify-between sm:gap-4 lg:items-start mb-4 md:mb-6',
-      hasBorder && 'border-b border-black',
+      hasBorder && 'border-b border-black dark:border-white/60',
     ]"
   >
     <h2
@@ -27,7 +27,7 @@ withDefaults(defineProps<Props>(), {
 
     <NuxtLink v-if="to"
       :to="to"
-      class="group inline-flex w-fit items-center gap-1.5 text-[11px] font-medium text-gray-700 transition hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black sm:text-xs"
+      class="group inline-flex w-fit items-center gap-1.5 text-[11px] font-medium text-gray-700 transition hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black dark:text-gray-300 dark:hover:text-white dark:focus-visible:outline-white sm:text-xs"
     >
       <span>{{ actionTitle }}</span>
 

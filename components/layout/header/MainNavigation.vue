@@ -12,7 +12,7 @@ const categories = [
 </script>
 
 <template>
-  <nav class="border-b border-black/70 bg-transparent">
+  <nav class="border-b border-black/70 bg-transparent dark:border-white/60">
     <div class="-mx-4 px-4 sm:mx-0 sm:px-0">
       <ul
         class="scrollbar-hide flex items-center justify-start gap-5 sm:gap-6 lg:gap-8 overflow-x-auto whitespace-nowrap py-1 sm:justify-center "
@@ -24,8 +24,8 @@ const categories = [
         >
           <NuxtLink
             :to="`/category/${category.slug}`"
-            class="whitespace-nowrap text-[11px] sm:text-[13px] font-semibold text-gray-700 transition hover:text-black "
-            active-class="text-red-600"
+            class="whitespace-nowrap text-[11px] sm:text-[13px] font-semibold text-gray-700 transition hover:text-black dark:text-gray-300 dark:hover:text-white"
+            active-class="!text-red-500"
           >
             {{ category.label }}
           </NuxtLink>
